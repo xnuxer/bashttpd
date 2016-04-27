@@ -64,3 +64,13 @@ Testimonials
 
 "If anyone installs that anywhere, they might meet a gruesome end with a rusty fork"
     --- BasHTTPd creator, maintainer
+
+My Additional Notes
+-------------------
+
+The current solution I think is the -e of netcat but I don't know why doesn't work... maybe is my nc version that I test on openwrt...
+with socat it works.... but I must run the shell script with this command.
+
+socat tcp-l:80,reuseaddr,fork EXEC:bashttpd &
+
+The socat and netcat samples from original repository on github doesn't works for me, but the socat that I used works.
